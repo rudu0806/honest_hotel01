@@ -198,7 +198,12 @@
         }
 
         /* Footer */
-        /* Removed */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
 
         @keyframes fadeInUp {
             from {
@@ -257,20 +262,15 @@
     </style>
 </head>
 <body>
-    <!-- Header/Navigation -->
     <nav id="navbar">
-        <div class="logo">Honest Hotel</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Why Us</a></li>
-            <li><a href="#rooms">Rooms</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="logo">🏨 Honest Hotel</div>
         <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+        </ul>
     </nav>
 
     <section class="hero" id="home">
@@ -343,8 +343,12 @@
         </div>
     </section>
 
+    <footer>
+        <p>&copy; 2025 Honest Hotel — All Rights Reserved</p>
+    </footer>
+
     <script>
-        // Navbar scroll effect (guarded)
+        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             if (!navbar) return;
@@ -355,7 +359,7 @@
             }
         });
 
-        // Mobile menu toggle (guarded)
+        // Mobile menu toggle
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             if (!navLinks) return;
@@ -372,7 +376,6 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
                     const navLinks = document.getElementById('navLinks');
                     if (navLinks) navLinks.classList.remove('active');
                 }
