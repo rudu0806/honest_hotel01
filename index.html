@@ -198,12 +198,7 @@
         }
 
         /* Footer */
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
+        /* Removed */
 
         @keyframes fadeInUp {
             from {
@@ -262,7 +257,21 @@
     </style>
 </head>
 <body>
-    <!-- Header removed -->
+    <!-- Header/Navigation -->
+    <nav id="navbar">
+        <div class="logo">Honest Hotel</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Why Us</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -333,8 +342,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer removed -->
 
     <script>
         // Navbar scroll effect (guarded)
